@@ -49,18 +49,20 @@ a{
     align-items: center;
 }
 
-#buttonLaunch{
-    margin-top: 50px;
+#button{
     width: 100px;
     height: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
-#buttonRestart{
-    margin-top: 50px;
-    width: 100px;
-    height: 50px;
-    margin-bottom: 50px;
+#icone {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+#buttonRestart, #buttonStart{
+    padding-right: 2%;
+    padding-left: 2%;
 }
 
 #timer{
