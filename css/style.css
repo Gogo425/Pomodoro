@@ -3,23 +3,67 @@ main{
     text-align: center;
     color: white;
     padding-top: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .travailPause{
-    border: 2px solid black;
-    height: 90px;
-    width: 70%;
+    height: 70px;
     margin: auto;
     border-radius: 20px;
+    width: 20%;
     box-shadow: 5px 5px 15px 5px black;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
+}
+
+h1{
+    font-weight: bolder;
 }
 
 a{
-    font-size: xx-large;
-    padding-left: 80px;
-    padding-right: 80px;
+    font-size: x-large;
+    margin: auto;
 }
 
+#cercle1{
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 70%;
+    width: 700px;
+    height: 700px;
+    box-shadow: 5px 5px 15px 5px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cercle2{
+    border-radius: 70%;
+    width: 600px;
+    height: 600px;
+    border: 20px solid lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonLaunch{
+    margin-top: 50px;
+    width: 100px;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+#buttonRestart{
+    margin-top: 50px;
+    width: 100px;
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+#timer{
+    font-size: 100px;
+    font-weight: bold;
+}
