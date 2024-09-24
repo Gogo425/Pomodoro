@@ -5,8 +5,7 @@ let isRunning = false
 let loop
 
 const timerElement = document.getElementById("timer")
-const buttonLaunch = document.getElementById("buttonStart")
-const buttonRestart = document.getElementById("buttonRestart")
+const buttonLaunch = document.getElementById("button")
 
 function display(){
     let minutes = parseInt(workTime / 60, 10)
@@ -42,7 +41,7 @@ function launchTravail(){
         
             workTime = workTime <= 0 ? 0 : workTime - 1
         
-        }, 1)
+        }, 100)
     }
 }
 
@@ -58,15 +57,26 @@ function launchTravail(){
 //     }
 // }
 
-buttonRestart.addEventListener('click', () => {
-    clearInterval(loop)
-    isRunning = false
-    workTime = beginMinutes * 60
-    display()
-})
+// buttonRestart.addEventListener('click', () => {
+//     clearInterval(loop)
+//     isRunning = false
+//     workTime = beginMinutes * 60
+//     display()
+// })
 
 buttonLaunch.addEventListener('click', () => {
-    launchTravail()
+    if(isRunning == false){
+        launchTravail()
+        buttonLaunch.classList.remove('fa-play')
+        buttonLaunch.classList.add('fa-arrow-rotate-left')
+    } else {
+        clearInterval(loop)
+        isRunning = false
+        workTime = beginMinutes * 60
+        display()
+        buttonLaunch.classList.remove('fa-arrow-rotate-left')
+        buttonLaunch.classList.add('fa-play')
+    }
 })
 
 display()
