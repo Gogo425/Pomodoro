@@ -28,11 +28,15 @@ function launchTravail(){
         
                 if(isBreak == true){
                     document.getElementById("background").style.background = "green"
+                    document.getElementById("break").style.color = "white"
+                    document.getElementById("work").style.color = "grey"
                     beginMinutes = 2
                     workTime = beginMinutes * 60
                     isBreak = false
                 } else {
                     document.getElementById("background").style.background = "rgb(207, 1, 1)"
+                    document.getElementById("work").style.color = "white"
+                    document.getElementById("break").style.color = "grey"
                     beginMinutes = 1
                     workTime = beginMinutes * 60
                     isBreak = true
@@ -44,25 +48,6 @@ function launchTravail(){
         }, 100)
     }
 }
-
-// function verif(){
-//     if(isRunning == true){
-//         document.querySelector("button").innerHTML = "fa-solid fa-arrow-rotate-left fa-10x"
-//     } else {
-//         document.querySelector("button").innerHTML = "fa-solid fa-play fa-10x"
-//         clearInterval(loop)
-//         isRunning = false
-//         workTime = beginMinutes * 60
-//         display()
-//     }
-// }
-
-// buttonRestart.addEventListener('click', () => {
-//     clearInterval(loop)
-//     isRunning = false
-//     workTime = beginMinutes * 60
-//     display()
-// })
 
 buttonLaunch.addEventListener('click', () => {
     if(isRunning == false){

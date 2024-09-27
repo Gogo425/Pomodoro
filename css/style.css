@@ -18,6 +18,10 @@ main{
     flex-direction: column;
 }
 
+#break {
+    color: gray;
+}
+
 .WorkBreak{
     height: 4em;
     border-radius: 20px;
@@ -36,10 +40,10 @@ a{
     font-size: 1.4em;
 }
 
-#cercle1{
+#circle1{
     margin: auto;
     margin-top: 50px;
-    border-radius: 70%;
+    border-radius: 50%;
     width: 35em;
     height: 35em;
     box-shadow: 5px 5px 15px 5px black;
@@ -48,8 +52,8 @@ a{
     align-items: center;
 }
 
-#cercle2{
-    border-radius: 70%;
+#circle2{
+    border-radius: 50%;
     width: 30em;
     height: 30em;
     border: 20px solid lightgoldenrodyellow;
@@ -74,12 +78,12 @@ a{
     font-weight: bold;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
-    #cercle1{
+@media screen and (min-width : 320px) and (max-width : 480px){
+    #circle1{
         width: 18em;
         height: 18em;
     }
-    #cercle2{
+    #circle2{
         width: 13em;
         height: 13em;
         border: 15px solid lightgoldenrodyellow;
@@ -99,6 +103,21 @@ a{
     }
 }
 
-@media only screen and (min-device-width : 480px) and (max-device-width : 570px){
-
+@media screen and (min-width : 480px) and (max-width : 570px){
+    #circle1{
+        width: 25em;
+        height: 25em;
+    }
+    #circle2{
+        width: 20em;
+        height: 20em;
+        border: 15px solid lightgoldenrodyellow;
+    }
+    #timer{
+        font-size: 3.5em;
+    }
+    #button{
+        font-size: 4em;
+        margin-top: 0.5em
+    }
 }
