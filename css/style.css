@@ -44,7 +44,7 @@ a{
     font-size: 1.4em;
 }
 
-#settings{
+#settingsBox{
     display: flex;
     justify-content: flex-end;
     color: black;
@@ -79,15 +79,63 @@ a{
 #timer{
     font-size: 6.25em;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
 
-#icon {
+#exit {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 0.4em;
+    cursor: pointer;
+}
+
+#buttonExit {
+    border: 2px solid black;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px 5px black;
+    padding: 5px;
+}
+
+#form {
+    box-shadow: 5px 5px 15px 5px black;
+    border-radius: 2em;
+    padding: 1em;
+    margin-top: 1em;
+    display: none;
+    position: absolute;
+    background-color: rgb(207, 1, 1);
+    width: 25em;
+    height: 11em;
+}
+
+.label-input {
+    margin-bottom: 2em;
+}
+
+label {
+    font-size: 1em;
+}
+
+input {
+    width: 7.2em;
+}
+
+#submit {
+    margin: auto;
+    width: 100px;
+    margin-top: 0.6em;
+    border-color: black;
+    cursor: pointer;
+}
+
+#icons {
     cursor: pointer;
     display: flex;
     align-self: center;
 }
 
-#button{
+#buttonStart{
     font-size: 7em;
     margin-top: 0.25em;
 }
@@ -111,6 +159,16 @@ a{
     #button{
         font-size: 4em;
         margin-top: 0.5em
+    }
+    #form {
+        width: 22em;
+        height: 8em;
+    }
+    label {
+        font-size: 0.8em;
+    }
+    .label-input{
+        margin-bottom: 0.8em;
     }
 }
 
@@ -138,10 +196,21 @@ a{
         font-size: 1.1em;
     }
     #settings {
-        font-size: 2em;
+        font-size: 0.9em;
     }
     #workBreak, #container{
         height: 3em;
         width: 15em;
+    }
+    #form {
+        width: 12em;
+        height: 12em;
+        margin-top: 0;
+    }
+    label {
+        font-size: 0.8em;
+    }
+    .label-input {
+        margin-bottom: 0;
     }
 }

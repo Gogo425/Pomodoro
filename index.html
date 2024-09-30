@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="icon" type="image/vnd.icon" href="favicon.ico">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script defer src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/90817b7c6b.js" crossorigin="anonymous"></script>
     <title>Pomodoro</title>
 </head>
-<body  id="background">
+<body id="background">
     <header>
         <h1>TIMER POMODORO</h1>
     </header>
@@ -19,19 +21,36 @@
                 <a id="work">Travail</a>
                 <a id="break">Pause</a>
             </div>
-            <div id="settings">
-                <span class="fa-solid fa-gear"></span>
+            <div id="settingsBox">
+                <span id="settings" class="fa-solid fa-gear"></span>
             </div>
         </div>
         <div id="circle1">
             <div id="circle2">
                 <div id="timer">
-
+                </div>
+                <div id="form">
+                    <div id="exit">
+                        <span id="buttonExit" class="fa-solid fa-x"></span>
+                    </div>
+                    <form action="" method="get">
+                        <div class="label-input">
+                            <label for="number">Entrez votre temps de travail : </label>
+                            <input id="numberWork" type="number" name="inputWork" max="120" min="1" placeholder="entre 1 et 120" required />
+                        </div>
+                        <div class="label-input">
+                            <label for="number">Entrez votre temps de pause : </label>
+                            <input id="numberBreak" type="number" name="inputBreak" max="120" min="1" placeholder="entre 1 et 120" required />
+                        </div>
+                        <div id="submit">
+                            <input id="submit" type="submit" value="Valider" />
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div id="icon">
-            <span id="button" class="fa-solid fa-play"></span>
+        <div id="icons">
+            <span id="buttonStart" class="fa-solid fa-play"></span>
         </div>
     </main>
 </body>
