@@ -121,7 +121,7 @@ input {
     width: 7.2em;
 }
 
-#submit {
+.submit {
     margin: auto;
     width: 100px;
     margin-top: 0.6em;
