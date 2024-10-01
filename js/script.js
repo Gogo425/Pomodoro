@@ -1,6 +1,5 @@
-let workTime = 10
-let breakTime = 5
-let time = workTime * 60
+let workTime = localStorage.getItem("inputWork") || 25
+let breakTime = localStorage.getItem("inputBreak") || 5
 let isBreak = true
 let isRunning = false
 let isForm = false
@@ -13,8 +12,12 @@ const settingsButton = document.getElementById("settings")
 const exitButton = document.getElementById("buttonExit")
 const numberWork = document.getElementById("numberWork")
 const numberBreak = document.getElementById("numberBreak")
+const inputBreak = document.getElementById("newTimeBreak")
+const inputWork = document.getElementById("newTimeWork")
+const submitButton = document.getElementById("submitButton")
 
 function display(){
+    let time = workTime * 60
     let minutes = parseInt(time / 60, 10)
     let seconds = parseInt(time % 60, 10)
     seconds  = "0" + seconds
@@ -25,6 +28,7 @@ function display(){
 }
 
 function timer(){
+    let time = workTime * 60
     form()
     if(isRunning == false && isForm == false){
         loop = setInterval(() => {
@@ -78,18 +82,43 @@ function launch(){
     })
 }
 
+function edit_time(){
+
+    inputBreak.addEventListener('change', ()=> {
+        if(inputBreak.value < 120 && inputBreak.value > 1){
+            localStorage.setItem("inputBreak", inputBreak.value)
+            breakTime = inputBreak.value
+            display()
+        }
+    })
+
+    inputWork.addEventListener('change', ()=> {
+        if(inputWork.value < 120 && inputWork.value > 1){
+            localStorage.setItem("inputWork", inputWork.value)
+            workTime = inputWork.value
+            display()
+        }
+   })
+}
+
 function form(){
+        buttonLaunch.addEventListener('click', ()=> {
+            if(isForm == true){
+                alert("Finissez de remplir les paramètres ou quittez les avant de relancer le chronomètre")
+            }
+        })
+
         settingsButton.addEventListener('click', ()=> {
             if(!isRunning){
                 isForm = true;
                 formulaire.style.display = "block"
-                buttonLaunch.addEventListener('click', ()=> {
-                    if(isForm == true){
-                        alert("Finissez de remplir les paramètres ou quittez les avant de relancer le chronomètre")
-                    }
-                })
+
+                
             }
         })
+
+        edit_time();
+
         exitButton.addEventListener('click', ()=> {
             isForm = false;
             if(!isRunning){
@@ -97,6 +126,7 @@ function form(){
             }
         })
 }
+
 
 form()
 launch()
