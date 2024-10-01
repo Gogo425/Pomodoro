@@ -90,7 +90,7 @@ function timer(){
         
             time = time <= 0 ? 0 : time - 1
         
-        }, 10)
+        }, 1000)
     }
 }
 
