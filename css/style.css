@@ -1,3 +1,4 @@
+/* The 3 main tags of the page */
 body{
     background-color: rgb(207, 1, 1);
     color: white;
@@ -18,6 +19,7 @@ main{
     flex-direction: column;
 }
 
+/* The style of the rectangle containing the settings button and the tags Break and Work and all the styles related to it */
 #break {
     color: gray;
 }
@@ -54,6 +56,11 @@ a{
     cursor: pointer;
 }
 
+#settingsBox :hover {
+    font-size: 1.3em;
+    transition: 0.6s ease-in-out;
+}
+/* The style of the first big circle  */
 #circle1{
     margin: auto;
     margin-top: 50px;
@@ -66,6 +73,7 @@ a{
     align-items: center;
 }
 
+/* The style of the second smaller circle */
 #circle2{
     border-radius: 50%;
     width: 30em;
@@ -76,6 +84,7 @@ a{
     align-items: center;
 }
 
+/* the style of the id of the tag where the timer is displayed */
 #timer{
     font-size: 6.25em;
     font-weight: bold;
@@ -83,21 +92,12 @@ a{
     justify-content: center;
 }
 
-#exit {
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 0.4em;
-    cursor: pointer;
+/* All the styles related to the formulary and its node's child */
+form {
+    padding-top: 1.8em;
 }
 
-#buttonExit {
-    border: 2px solid black;
-    border-radius: 50%;
-    box-shadow: 5px 5px 15px 5px black;
-    padding: 5px;
-}
-
-#form {
+#formulary {
     box-shadow: 5px 5px 15px 5px black;
     border-radius: 2em;
     padding: 1em;
@@ -110,17 +110,41 @@ a{
 }
 
 .label-input {
-    margin-bottom: 3.5em;
-}
+    margin-bottom: 1.5em;
+    display: flex;
+    justify-content: center;
+} 
 
 label {
     font-size: 1em;
 }
 
 input {
-    width: 7.2em;
+    width: 7.3em;
 }
 
+#check-align {
+    display: flex;
+    justify-content: center;
+}
+
+#check {
+    color: green;
+    font-size: 2em;
+    padding: 0.1em;
+    border: 2px solid black;
+    background-color: black;
+    box-shadow: 3px 3px 13px 3px black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#check-align :hover {
+    font-size: 2.3em;
+    transition: ease-in-out 0.2s;
+}
+
+/* The style of the button which allows to launch the timer */
 #icons {
     cursor: pointer;
     display: flex;
@@ -132,6 +156,7 @@ input {
     margin-top: 0.25em;
 }
 
+/* Media-query between 585px and 480px */
 @media screen and (min-width : 480px) and (max-width : 585px){
     #circle1{
         width: 25em;
@@ -152,18 +177,19 @@ input {
         font-size: 4em;
         margin-top: 0.5em
     }
-    #form {
-        width: 22em;
+    #formulary {
+        width: 15em;
         height: 8em;
     }
     label {
         font-size: 0.8em;
     }
     .label-input{
-        margin-bottom: 1.5em;
+        margin-bottom: 0.8em;
     }
 }
 
+/* Media-query between 480px and 320px */
 @media screen and (min-width : 320px) and (max-width : 480px){
     #circle1{
         width: 18em;
@@ -194,15 +220,18 @@ input {
         height: 3em;
         width: 15em;
     }
-    #form {
-        width: 12em;
-        height: 12em;
+    #formulary {
+        width: 15em;
+        height: 10em;
         margin-top: 0;
     }
     label {
         font-size: 0.8em;
     }
+    input {
+        width: 6.2em;
+    }
     .label-input {
-        margin-bottom: 2em;
+        padding-top: 0.2em;
     }
 }

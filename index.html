@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- the script to my css file -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <!-- The link to the favicon -->
     <link rel="icon" type="image/vnd.icon" href="favicon.ico">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- the link to my javascript file-->
     <script defer src="js/script.js"></script>
+    <!-- the link to my font-awesome kit -->
     <script src="https://kit.fontawesome.com/90817b7c6b.js" crossorigin="anonymous"></script>
     <title>Pomodoro</title>
 </head>
@@ -29,20 +31,20 @@
             <div id="circle2">
                 <div id="timer">
                 </div>
-                <div id="form">
-                    <div id="exit">
-                        <span id="buttonExit" class="fa-solid fa-x"></span>
-                    </div>
+                <div id="formulary">
                     <form method="post">
                         <div class="label-input">
-                            <label for="newTimeWork">Entrez votre temps de travail : </label>
+                            <label for="newTimeWork">Temps de travail : </label>
                             <input id="newTimeWork" type="number" name="newTimeWork" max="120" min="1" placeholder="entre 1 et 120" required>
                         </div>
                         <div class="label-input">
-                            <label for="newTimeBreak">Entrez votre temps de pause : </label>
+                            <label for="newTimeBreak">Temps de pause : </label>
                             <input id="newTimeBreak" type="number" name="newTimeBreak" max="120" min="1" placeholder="entre 1 et 120" required>
                         </div>
                     </form>
+                    <div id="check-align">
+                        <span id="check" class="fa-solid fa-check"></span>
+                    </div>
                 </div>
             </div>
         </div>
